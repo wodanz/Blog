@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Category;
+namespace App\Http\Controllers\Admin\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Post\StoreRequest;
-use App\Models\Post;
+use App\Http\Requests\Admin\Tag\StoreRequest;
+use App\Models\Tag;
 
 class StoreController extends Controller
 {
@@ -13,8 +13,8 @@ class StoreController extends Controller
         $data = $request->validated();
         //dd($data);
         //Category::create($data);
-        Post::firstOrCreate($data);
-        return redirect()->route('admin.category.index');
+        Tag::firstOrCreate($data);
+        return redirect()->route('admin.tag.index');
     }
 
 }

@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Редактирование категории</h1>
+                        <h1 class="m-0">Добавление тэга</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -26,16 +26,16 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="#" method="POST" class="col-4">
+                        <form action="{{route('admin.tag.store')}}" method="POST" class="col-4">
                             @csrf
                             <div class="form-group">
                                 <label>Название</label>
-                                <input type="text" class="form-control" name="title" placeholder="Название категории" value="{{$category->title}}">
+                                <input type="text" class="form-control" name="title" placeholder="Название тэга">
                                 @error('title')
                                 <div class="text-danger">Поле необходимо быть заполненным</div>
                                 @enderror
                             </div>
-                        <input type="submit" class="btn btn-primary" value="Изменить">
+                        <input type="submit" class="btn btn-primary" value="Добавить">
                         </form>
                     </div>
                 </div>
